@@ -2,7 +2,7 @@ options(java.parameters = "-Xmx4g" )
 
 library(XLConnect)
 
-setwd("/home/alf/Scrivania/lav_ubu_grasso")
+setwd("")
 
 
 allertameteoTOS_TAGS=readWorksheetFromFile("allertameteoTOS_TAGS v6.0ns.xlsx",sheet=2)
