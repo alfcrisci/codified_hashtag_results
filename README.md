@@ -1,4 +1,3 @@
-# Supplementary materials of paper  codified_hashtag_results
 ## Public repo of data and code of work "Codified hashtag"
 
 ### Full statistics of full channel 
