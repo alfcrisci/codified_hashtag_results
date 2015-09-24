@@ -1,0 +1,7 @@
+## Codified hashtags for Weather Warning on Twitter: an italian case study  
+
+*Authors*:  V. Grasso A
+
+*Abstract* 
+
+During emergencies more and more messages are shared through social media platforms which are becoming a primary source of information for people and emergency managers. In this messages deluge the problem is to find relevant and trustable information bits. For Twitter the practice of hashtagging helps to associate messages to specific facts or events helping coordinate conversations. Proposal of codified hashtagging is emerging as a practical way to coordinate twitter messages during emergencies as a way to quickly identify relevant information. This works consider a case study of use of codified hashtags for weather  warning in Italy. From 3rd november to 9 december 2014, Tweets identified by the 3 codified hashtags #allertameteoTOS, #allertameteoLIG and #allertameteoPIE were downloaded through Twitter API, collecting a corpus of around 35.000 tweets. The hashtags were related to weather warning for three different italian regions, namely TOS for Tuscany, LIG for Liguria and PIE for Piedmont region. The analysis was aimed at highlighting the differences amongst the three regional codified hashtags. In particular hashtags were annotated as belonging to specific classes (emergency, geonames, media, public bodies, weather) evaluating the difference in co-occurring hashtags; also activity of public users and civil protection agents were analysed in order to evaluate their activity and engagement with communities.  
