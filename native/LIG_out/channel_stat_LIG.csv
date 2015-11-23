@@ -1,2 +1,2 @@
-"N_tweets","N_retweets","N_native_tweets","N_hash","N_mention","N_links","Nuniq_authors","Nuniq_hash","Nuniq_mentions","Nuniq_links","Nfull_retweet","Nfull_retweet_missing","Nreplies","Nfavor"
-5915,0,5915,11516,2629,3021,1124,1071,542,2700,18100,1723,391,0
+"N_tweets","N_retweets","N_native_tweets","N_hash","N_mention","N_links","Nuniq_authors","Nuniq_hash","Nuniq_mentions","Nuniq_links","Nmean_links","Nfull_retweet","Nfull_retweet_missing","Nreplies","Nfavor","Ntweets0hashs","Ntweets1hashs","NtweetsNhashs","Ntweets0mentions","Ntweets1mentions","NtweetsNmentions","Ntweets0links","Ntweets1links","NtweetsNlinks"
+5915,0,5915,11516,2629,3021,1124,877,542,2700,0.68,18067,1722,391,0,0,2591,3324,3992,1923,0,3244,2323,348

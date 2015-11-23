@@ -5,7 +5,7 @@
 library(XLConnect)
 library(rTwChannel)
 
-setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys")
+setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/full")
 
 #########################################################################################
 # Load periods
@@ -29,10 +29,12 @@ an_full_allertameteoPIE=readRDS("data/an_full_allertameteoPIE.rds")
 
 #########################################################################################
 # Analisys only original tweets
+setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/native")
 
 an_native_allertameteoLIG=readRDS("data/an_native_allertameteoLIG.rds")
 an_native_allertameteoTOS=readRDS("data/an_native_allertameteoTOS.rds")
 an_native_allertameteoPIE=readRDS("data/an_native_allertameteoPIE.rds")
+setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/full")
 
 ################################################################################à
 # load list of annotation for each category of hash and authors
@@ -60,51 +62,49 @@ full_notes_PIE_authors=readRDS("data/full_notes_PIE_authors.rds")
 #########################################################################################
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/full")
 
-stat_notes_hash_LIG_full=create_state_obj(an_full_allertameteoLIG$hash_date,res_notes_LIG_hash,fileName="stat_notes_hash_LIG_full")
-stat_notes_hash_TOS_full=create_state_obj(an_full_allertameteoTOS$hash_date,res_notes_TOS_hash,fileName="stat_notes_hash_TOS_full")
-stat_notes_hash_PIE_full=create_state_obj(an_full_allertameteoPIE$hash_date,res_notes_PIE_hash,fileName="stat_notes_hash_PIE_full")
+stat_notes_hash_LIG_full=create_state_obj(an_full_allertameteoLIG$hash_date,res_notes_LIG_hash,fileName="data/stat_notes_hash_LIG_full")
+stat_notes_hash_TOS_full=create_state_obj(an_full_allertameteoTOS$hash_date,res_notes_TOS_hash,fileName="data/stat_notes_hash_TOS_full")
+stat_notes_hash_PIE_full=create_state_obj(an_full_allertameteoPIE$hash_date,res_notes_PIE_hash,fileName="data/stat_notes_hash_PIE_full")
 
-stat_notes_authors_LIG_full=create_state_obj(an_full_allertameteoLIG$authors_date,res_notes_LIG_authors,fileName="stat_notes_authors_LIG_full")
-stat_notes_authors_TOS_full=create_state_obj(an_full_allertameteoTOS$authors_date,res_notes_TOS_authors,fileName="stat_notes_authors_TOS_full")
-stat_notes_authors_PIE_full=create_state_obj(an_full_allertameteoPIE$authors_date,res_notes_PIE_authors,fileName="stat_notes_authors_PIE_full")
+stat_notes_authors_LIG_full=create_state_obj(an_full_allertameteoLIG$authors_date,res_notes_LIG_authors,fileName="data/stat_notes_authors_LIG_full")
+stat_notes_authors_TOS_full=create_state_obj(an_full_allertameteoTOS$authors_date,res_notes_TOS_authors,fileName="data/stat_notes_authors_TOS_full")
+stat_notes_authors_PIE_full=create_state_obj(an_full_allertameteoPIE$authors_date,res_notes_PIE_authors,fileName="data/stat_notes_authors_PIE_full")
 
-stat_notes_mentions_LIG_full=create_state_obj(an_full_allertameteoLIG$mentions_date,res_notes_LIG_authors,fileName="stat_notes_mentions_LIG_full")
-stat_notes_mentions_TOS_full=create_state_obj(an_full_allertameteoTOS$mentions_date,res_notes_TOS_authors,fileName="stat_notes_mentions_TOS_full")
-stat_notes_mentions_PIE_full=create_state_obj(an_full_allertameteoPIE$mentions_date,res_notes_PIE_authors,fileName="stat_notes_mentions_PIE_full")
+stat_notes_mentions_LIG_full=create_state_obj(an_full_allertameteoLIG$mentions_date,res_notes_LIG_authors,fileName="data/stat_notes_mentions_LIG_full")
+stat_notes_mentions_TOS_full=create_state_obj(an_full_allertameteoTOS$mentions_date,res_notes_TOS_authors,fileName="data/stat_notes_mentions_TOS_full")
+stat_notes_mentions_PIE_full=create_state_obj(an_full_allertameteoPIE$mentions_date,res_notes_PIE_authors,fileName="data/stat_notes_mentions_PIE_full")
 
 
-
-setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys")
 
 ##########################################################################################
 
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/native")
 
-stat_notes_hash_LIG_native=create_state_obj(an_native_allertameteoLIG$hash_date,res_notes_LIG_hash,fileName="stat_notes_hash_LIG_native")
-stat_notes_hash_TOS_native=create_state_obj(an_native_allertameteoTOS$hash_date,res_notes_TOS_hash,fileName="stat_notes_hash_TOS_native")
+stat_notes_hash_LIG_native=create_state_obj(an_native_allertameteoLIG$hash_date,res_notes_LIG_hash,fileName="data/stat_notes_hash_LIG_native")
+stat_notes_hash_TOS_native=create_state_obj(an_native_allertameteoTOS$hash_date,res_notes_TOS_hash,fileName="data/stat_notes_hash_TOS_native")
 stat_notes_hash_PIE_native=create_state_obj(an_native_allertameteoPIE$hash_date,res_notes_PIE_hash,fileName="stat_notes_hash_PIE_native")
 
-stat_notes_authors_LIG_native=create_state_obj(an_native_allertameteoLIG$authors_date,res_notes_LIG_authors,fileName="stat_notes_authors_LIG_native")
-stat_notes_authors_TOS_native=create_state_obj(an_native_allertameteoTOS$authors_date,res_notes_TOS_authors,fileName="stat_notes_authors_TOS_native")
-stat_notes_authors_PIE_native=create_state_obj(an_native_allertameteoPIE$authors_date,res_notes_PIE_authors,fileName="stat_notes_authors_PIE_native")
+stat_notes_authors_LIG_native=create_state_obj(an_native_allertameteoLIG$authors_date,res_notes_LIG_authors,fileName="data/stat_notes_authors_LIG_native")
+stat_notes_authors_TOS_native=create_state_obj(an_native_allertameteoTOS$authors_date,res_notes_TOS_authors,fileName="data/stat_notes_authors_TOS_native")
+stat_notes_authors_PIE_native=create_state_obj(an_native_allertameteoPIE$authors_date,res_notes_PIE_authors,fileName="data/stat_notes_authors_PIE_native")
 
-stat_notes_mentions_LIG_native=create_state_obj(an_native_allertameteoLIG$mentions_date,res_notes_LIG_authors,fileName="stat_notes_mentions_LIG_native")
-stat_notes_mentions_TOS_native=create_state_obj(an_native_allertameteoTOS$mentions_date,res_notes_TOS_authors,fileName="stat_notes_mentions_TOS_native")
-stat_notes_mentions_PIE_native=create_state_obj(an_native_allertameteoPIE$mentions_date,res_notes_PIE_authors,fileName="stat_notes_mentions_PIE_native")
+stat_notes_mentions_LIG_native=create_state_obj(an_native_allertameteoLIG$mentions_date,res_notes_LIG_authors,fileName="data/stat_notes_mentions_LIG_native")
+stat_notes_mentions_TOS_native=create_state_obj(an_native_allertameteoTOS$mentions_date,res_notes_TOS_authors,fileName="data/stat_notes_mentions_TOS_native")
+stat_notes_mentions_PIE_native=create_state_obj(an_native_allertameteoPIE$mentions_date,res_notes_PIE_authors,fileName="data/stat_notes_mentions_PIE_native")
 
 ####################################################################################################################
 # 
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/full")
 
-stat_notes_hash_TOS=readRDS("stat_notes_hash_TOS_full.rds")
-stat_notes_authors_TOS=readRDS("stat_notes_authors_TOS_full.rds")
-stat_notes_mentions_TOS=readRDS("stat_notes_mentions_TOS_full.rds")
-stat_notes_hash_PIE=readRDS("stat_notes_hash_PIE_full.rds")
-stat_notes_authors_PIE=readRDS("stat_notes_authors_PIE_full.rds")
-stat_notes_mentions_PIE=readRDS("stat_notes_mentions_PIE_full.rds")
-stat_notes_hash_LIG=readRDS("stat_notes_hash_LIG_full.rds")
-stat_notes_authors_LIG=readRDS("stat_notes_authors_LIG_full.rds")
-stat_notes_mentions_LIG=readRDS("stat_notes_mentions_LIG_full.rds")
+stat_notes_hash_TOS=readRDS("data/stat_notes_hash_TOS_full.rds")
+stat_notes_authors_TOS=readRDS("data/stat_notes_authors_TOS_full.rds")
+stat_notes_mentions_TOS=readRDS("data/stat_notes_mentions_TOS_full.rds")
+stat_notes_hash_PIE=readRDS("data/stat_notes_hash_PIE_full.rds")
+stat_notes_authors_PIE=readRDS("data/stat_notes_authors_PIE_full.rds")
+stat_notes_mentions_PIE=readRDS("data/stat_notes_mentions_PIE_full.rds")
+stat_notes_hash_LIG=readRDS("data/stat_notes_hash_LIG_full.rds")
+stat_notes_authors_LIG=readRDS("data/stat_notes_authors_LIG_full.rds")
+stat_notes_mentions_LIG=readRDS("data/stat_notes_mentions_LIG_full.rds")
 
 ####################################################################################################################
 # i full with retweet statistics
@@ -124,7 +124,7 @@ channel_LIG_topfull_message_retweeted=channel_outputs(an_full_allertameteoLIG,pa
 notes_hash_LIG_stat=notes_outputs(channel_LIG_daily_stat,stat_notes_hash_LIG,prefix_file="notes_hash_LIG");
 notes_authors_LIG_stat=notes_outputs(channel_LIG_daily_stat,stat_notes_authors_LIG,prefix_file="notes_authors_LIG");
 notes_mentions_LIG_stat=notes_outputs(channel_LIG_daily_stat,stat_notes_mentions_LIG,prefix_file="notes_mentions_LIG");
-################################à
+################################
 
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/full/TOS_out")
 
@@ -172,6 +172,7 @@ df_LIG_TOS_PIE_hash=df_LIG_TOS_hash
 df_LIG_TOS_PIE_hash$NfreqPIE=df_LIG_PIE_hash$NfreqPIE
 df_LIG_TOS_PIE_hash$N_uniquePIE=df_LIG_PIE_hash$N_uniquePIE
 write.csv(df_LIG_TOS_PIE_hash,"df_LIG_TOS_PIE_hash_complete.csv",row.names = FALSE)
+
 df_LIG_TOS_PIE_hash=df_LIG_TOS_PIE_hash[,cols_arrange]
 df_LIG_TOS_PIE_hash[,2]=as.numeric(df_LIG_TOS_PIE_hash[,2])
 df_LIG_TOS_PIE_hash[,3]=as.numeric(df_LIG_TOS_PIE_hash[,3])
@@ -185,6 +186,7 @@ df_LIG_PIE_authors=merge(notes_authors_LIG_stat$stat_full,notes_authors_PIE_stat
 df_LIG_TOS_PIE_authors=df_LIG_TOS_authors
 df_LIG_TOS_PIE_authors$NfreqPIE=df_LIG_PIE_authors$NfreqPIE
 df_LIG_TOS_PIE_authors$N_uniquePIE=df_LIG_PIE_authors$N_uniquePIE
+
 write.csv(df_LIG_TOS_PIE_authors,"df_LIG_TOS_PIE_authors_complete.csv",row.names = FALSE)
 
 df_LIG_TOS_PIE_authors=df_LIG_TOS_PIE_authors[,cols_arrange]
@@ -221,15 +223,15 @@ write.csv(df_LIG_TOS_PIE_hash,"LIG_TOS_PIE_hash_full.csv")
 
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/native/")
 
-stat_notes_hash_TOS=readRDS("stat_notes_hash_TOS_native.rds")
-stat_notes_authors_TOS=readRDS("stat_notes_authors_TOS_native.rds")
-stat_notes_mentions_TOS=readRDS("stat_notes_mentions_TOS_native.rds")
-stat_notes_hash_PIE=readRDS("stat_notes_hash_PIE_native.rds")
-stat_notes_authors_PIE=readRDS("stat_notes_authors_PIE_native.rds")
-stat_notes_mentions_PIE=readRDS("stat_notes_mentions_PIE_native.rds")
-stat_notes_hash_LIG=readRDS("stat_notes_hash_LIG_native.rds")
-stat_notes_authors_LIG=readRDS("stat_notes_authors_LIG_native.rds")
-stat_notes_mentions_LIG=readRDS("stat_notes_mentions_LIG_native.rds")
+stat_notes_hash_TOS=readRDS("data/stat_notes_hash_TOS_native.rds")
+stat_notes_authors_TOS=readRDS("data/stat_notes_authors_TOS_native.rds")
+stat_notes_mentions_TOS=readRDS("data/stat_notes_mentions_TOS_native.rds")
+stat_notes_hash_PIE=readRDS("data/stat_notes_hash_PIE_native.rds")
+stat_notes_authors_PIE=readRDS("data/stat_notes_authors_PIE_native.rds")
+stat_notes_mentions_PIE=readRDS("data/stat_notes_mentions_PIE_native.rds")
+stat_notes_hash_LIG=readRDS("data/stat_notes_hash_LIG_native.rds")
+stat_notes_authors_LIG=readRDS("data/stat_notes_authors_LIG_native.rds")
+stat_notes_mentions_LIG=readRDS("data/stat_notes_mentions_LIG_native.rds")
 
 
 
@@ -371,6 +373,7 @@ tabella_hash_TOS_cat_full=an_full_allertameteoTOS$table_hash
 tabella_hash_TOS_cat_full$cat=hash_look(tolower(an_full_allertameteoTOS$table_hash$hashtag),full_notes_TOS_hash[!duplicated(full_notes_TOS_hash)])
 writeWorksheetToFile("tabella_hash_TOS_cat_full.xls", tabella_hash_TOS_cat_full, sheet="tabella_hash_TOS_cat_full")
 write.csv(tabella_hash_TOS_cat_full,"tabella_hash_TOS_cat_full.csv")
+
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/native/TOS_out")
 
 tabella_hash_TOS_cat_native=an_native_allertameteoTOS$table_hash
@@ -379,6 +382,7 @@ writeWorksheetToFile("tabella_hash_TOS_cat_native.xls", tabella_hash_TOS_cat_nat
 write.csv(tabella_hash_TOS_cat_native,"tabella_hash_TOS_cat_native.csv")
 
 ####################################################################################################################################################################à
+
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/full/PIE_out")
 
 tabella_authors_PIE_cat_full=an_full_allertameteoPIE$table_authors
@@ -399,7 +403,8 @@ setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/full/LIG_out")
 tabella_authors_LIG_cat_full=an_full_allertameteoLIG$table_authors
 tabella_authors_LIG_cat_full$cat=hash_look(tolower(an_full_allertameteoLIG$table_authors$authors),full_notes_LIG_authors[!duplicated(full_notes_LIG_authors)])
 writeWorksheetToFile("tabella_authors_LIG_cat_full.xls", tabella_authors_LIG_cat_full, sheet="tabella_authors_LIG_cat_full")
-write.csv( tabella_authors_TOS_cat_full,"tabella_authors_TOS_cat_full.csv")
+
+write.csv( tabella_authors_LIG_cat_full,"tabella_authors_LIG_cat_full.csv")
 
 setwd("/home/alf/Scrivania/lav_ubu_grasso/newanalisys/native/LIG_out")
 
